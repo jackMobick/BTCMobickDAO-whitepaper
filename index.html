@@ -368,12 +368,12 @@ code {
 <h1 id="btcmobick-dao-%EB%B0%B1%EC%84%9C-whitepaper">BTCMobick DAO 백서 (Whitepaper)</h1>
 <h2 id="1-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B0%9C%EC%9A%94">1. 프로젝트 개요</h2>
 <p>BTCMobick DAO는 비트모빅(BTCMobick) 생태계의 지속가능한 성장과 투명한 운영을 지원하기 위해 설계된 탈중앙형 거버넌스 조직입니다.
-생태계를 위해 비트모빅을 소각하면 BTCMobick DAO 거버넌스 토큰을 얻을 수 있고, 투표 플랫폼에서 주요 안건을 제안하거나 올라간 안건에 대한 의결활동에 참여할 수 있습니다.
+생태계를 위해 비트모빅을 소각하면 BTCMobick DAO 거버넌스 토큰을 얻을 수 있고, 투표 플랫폼에서 주요 안건을 제안하거나 올라간 안건에 대한 의결 활동에 참여할 수 있습니다.
 이는 기존의 오프라인 중심 의사결정 방식과는 다르게 온라인 기반에서의 열린 참여와 논의를 통해 생태계 구성원 모두가 다양한 제안과 의견을 책임감 있게 제시할 수 있는 자리를 마련하고자 합니다.</p>
 <h2 id="2-%EC%B2%A0%ED%95%99%EA%B3%BC-%EB%B9%84%EC%A0%84">2. 철학과 비전</h2>
 <p>BTCMobick DAO는 생태계를 위한 제안과 의결이 투명하게 이뤄지는 온라인 투표 플랫폼입니다.
 이곳에서 아이디어가 제안되고, 투표를 통해 실행방향이 투명하게 결정됨에 따라 다양한 지원과 참여가 일어나길 기대합니다.
-특히 '결정의 최종성 (Finalty of Decision)' 을 가치로 삼고, 이 시스템안에서 제안 → 의결 → 실행까지의 프로세스가 스마트 컨트랙트에 의해 자동화되기를 목표합니다.</p>
+특히 '결정의 최종성 (Finality of Decision)' 을 가치로 삼고, 이 시스템 안에서 제안 → 의결 → 실행까지의 프로세스가 스마트 컨트랙트에 의해 자동화되기를 목표합니다.</p>
 <h2 id="3-%EB%AC%B8%EC%A0%9C-%EC%A0%95%EC%9D%98">3. 문제 정의</h2>
 <p>비트모빅 생태계는 다양한 활동과 프로젝트가 존재하지만, 다음과 같은 문제점이 있습니다:</p>
 <ul>
@@ -390,7 +390,7 @@ code {
 <li>제안 남용 방지를 위한 최소 보유 요건/제안 수수료 논의</li>
 <li>향후 온체인 확장을 위한 Timelock + Governor 구조 도입 준비</li>
 </ul>
-<h2 id="5-%ED%86%A0%ED%81%B0-%EA%B5%AC%EC%A1%B0">5. 토큰 구조</h2>
+<h2 id="5-%ED%86%A0%ED%81%B0-%EA%B5%AC%EC%84%B1">5. 토큰 구성</h2>
 <table>
 <thead>
 <tr>
@@ -414,11 +414,12 @@ code {
 </table>
 <p><strong>기본 구조</strong></p>
 <ul>
-<li>최대 발행량: 10,000,000 BTCMobick DAO (= BMBDAO)</li>
-<li>발행 방식: 개인 BTCMobick Coin 소각량 확인후 1:1000 비율로 발행</li>
-<li>소각 시기: 2025년 4월 23일(수) 00:00 UTC 부터의 소각량을 대상 (한국시간 4월 23일 09:00시부터)</li>
+<li>최대 발행량: 1,000만 BTCMobick DAO (= BMBDAO)</li>
+<li>발행 방식: 개인 BTCMobick Coin 소각량 확인 후 1:1000 비율로 발행</li>
+<li>소각 시기: 2025년 4월 23일(수) 00:00 UTC 부터의 소각량을 대상 (한국시간: 23일 오전 9시부터)</li>
 <li>소각 주소: 1JTBCburnedMobick2XXXXXXXXXXVxbTXA in BTCMobick Chain</li>
-<li>최소 소각량: 0.1 BMB, 소주점 1자리까지만 count (예. 0.25 소각시 -&gt; 0.2로 간주)</li>
+<li>최소 소각량: 0.1 BMB (소수점 첫째 자리까지 반영)
+예. 0.25 소각시 -&gt; 0.2로 간주</li>
 </ul>
 <h2 id="6-%EA%B1%B0%EB%B2%84%EB%84%8C%EC%8A%A4-%EA%B5%AC%EC%A1%B0">6. 거버넌스 구조</h2>
 <ul>
@@ -443,11 +444,11 @@ code {
 <ol>
 <li>사용자: 2025-04-25 10시 BTCMobick 3개 소각</li>
 <li>DAO팀: BTCMobick 소각 확인 및 사용자의 Arbitrum 수신지갑 확인 -&gt; 3,000 BMBDAO 발행 및 지급</li>
-<li>사용자: BMBDDAO 토큰 수신 확인. 이후 Arbitrum에서 'delegate(희망주소)'를 실행해야 의결권이 부여됨 (https://arbiscan.io 에서 실행가능)</li>
+<li>사용자: BMBDAO 토큰 수신 확인. 이후 Arbitrum에서 'delegate(희망주소)'를 실행해야 의결권이 부여됨 (https://arbiscan.io 에서 실행가능)</li>
 </ol>
 <p>[제안 및 투표 진행과정]</p>
 <ol>
-<li>제안자: 100 BMBDAO 이상 Delegated 되어 있어야 제안 가능. 확인후, BTCMobick DAO의 Tresury지갑에 있는 자산 활용방법 제안 (투표개시: 04-22, 마감: 04-25)</li>
+<li>제안자: 100 BMBDAO 이상 Delegated 되어 있어야 제안 가능. 확인후, BTCMobick DAO의 Treasury지갑에 있는 자산 활용방법 제안 (투표개시: 04-22, 마감: 04-25)</li>
 </ol>
 <ul>
 <li>a. xx장소에서 xx월일 참여자 100명에게 에어드랍한다.</li>
@@ -456,7 +457,7 @@ code {
 </ul>
 <ol start="2">
 <li>투표자: 상기 제안에 대해 a,b,c 선택사항중 투표</li>
-<li>DAO팀: 투표결과 확인후 그에 따라 집행</li>
+<li>DAO팀: 투표 결과 확인 후 그에 따라 집행</li>
 </ol>
 <h2 id="8-%EB%B2%95%EC%A0%81-%EA%B3%A0%EC%A7%80">8. 법적 고지</h2>
 <p>BTCMobick DAO는 수익을 목적으로 하지 않는 비영리 탈중앙화 조직으로, 본 프로젝트에서 발행되는 BTCMobick DAO 토큰은 어떠한 수익, 이자, 배당, 투자 수익도 약속하거나 보장하지 않습니다.
@@ -494,7 +495,7 @@ code {
 <h2 id="10-btcmobick-dao-%EA%B4%80%EB%A0%A8-%EC%A3%BC%EC%86%8C">10. BTCMobick DAO 관련 주소</h2>
 <ul>
 <li>
-<p>Toke Contract Address(Arbitrum): 0xD9897a41D7B8089c3a321559Ae80a1D14Ec0f6cc</p>
+<p>Token Contract Address(Arbitrum): 0xD9897a41D7B8089c3a321559Ae80a1D14Ec0f6cc</p>
 </li>
 <li>
 <p>WhitePaper: https://jackmobick.github.io/BTCMobickDAO-whitepaper/</p>
