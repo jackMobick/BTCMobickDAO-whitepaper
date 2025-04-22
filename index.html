@@ -415,18 +415,20 @@ code {
 <p><strong>기본 구조</strong></p>
 <ul>
 <li>최대 발행량: 10,000,000 BTCMobick DAO (= BMBDAO)</li>
-<li>발행 방식: 개인 BTCMobick Coin 소각량 확인후 1:1000 비율로 발행 (2025년 4월 20일 00:00 UTC 부터의 하기 소각주소의 소각량 대상)</li>
+<li>발행 방식: 개인 BTCMobick Coin 소각량 확인후 1:1000 비율로 발행</li>
+<li>소각 시기: 2025년 4월 23일(수) 00:00 UTC 부터의 소각량을 대상 (한국시간 4월 23일 09:00시부터)</li>
 <li>소각 주소: 1JTBCburnedMobick2XXXXXXXXXXVxbTXA in BTCMobick Chain</li>
+<li>최소 소각량: 0.1 BMB, 소주점 1자리까지만 count (예. 0.25 소각시 -&gt; 0.2로 간주)</li>
 </ul>
 <h2 id="6-%EA%B1%B0%EB%B2%84%EB%84%8C%EC%8A%A4-%EA%B5%AC%EC%A1%B0">6. 거버넌스 구조</h2>
 <ul>
 <li>Snapshot 기반 제안 및 투표</li>
-<li>제안 조건: 100 BMBDAO 이상 보유 시 가능 (초기), 수수료 없음</li>
+<li>제안 조건: 100 BMBDAO 이상 Delegated 시 가능, 수수료 없음 (향후 DAO에서 결정)</li>
 <li>향후 Governor + Timelock Controller 기반 온체인 자동 실행 구조 계획</li>
 </ul>
 <h2 id="7-%EC%8A%A4%EB%A7%88%ED%8A%B8%EC%BB%A8%ED%8A%B8%EB%9E%99%ED%8A%B8-%EC%84%A4%EA%B3%84">7. 스마트컨트랙트 설계</h2>
 <ul>
-<li>초기운영: 설계자 권한 위임 → 점진적 탈중앙화 전환</li>
+<li>초기운영: 설계자 운영 -&gt; 권한 위임후 점진적 탈중앙화 전환</li>
 <li>구성요소:
 <ul>
 <li>ERC20Votes: 투표권 위임 및 조회</li>
@@ -439,7 +441,7 @@ code {
 <h2 id="8-%EC%82%AC%EC%9A%A9%EC%98%88%EC%8B%9C">8. 사용예시</h2>
 <p>[토큰 배포과정]</p>
 <ol>
-<li>사용자: 2025-04-20 10시 BTCMobick 3개 소각</li>
+<li>사용자: 2025-04-25 10시 BTCMobick 3개 소각</li>
 <li>DAO팀: BTCMobick 소각 확인 및 사용자의 Arbitrum 수신지갑 확인 -&gt; 3,000 BMBDAO 발행 및 지급</li>
 <li>사용자: BMBDDAO 토큰 수신 확인. 이후 Arbitrum에서 'delegate(희망주소)'를 실행해야 의결권이 부여됨 (https://arbiscan.io 에서 실행가능)</li>
 </ol>
@@ -489,13 +491,23 @@ code {
 </tr>
 </tbody>
 </table>
-<h2 id="10-%EC%A3%BC%EC%86%8C">10. 주소</h2>
+<h2 id="10-btcmobick-dao-%EA%B4%80%EB%A0%A8-%EC%A3%BC%EC%86%8C">10. BTCMobick DAO 관련 주소</h2>
 <ul>
-<li>Toke Contract Address(Arbitrum): 0xD9897a41D7B8089c3a321559Ae80a1D14Ec0f6cc</li>
-<li>WhitePaper: https://jackmobick.github.io/BTCMobickDAO-whitepaper/</li>
-<li>BTCMobick DAO Token 신청서: https://forms.gle/Y4a6VVMYWoWkduu98</li>
-<li>Kakao Group Chat: https://open.kakao.com/o/gL9Hyysh</li>
-<li>BTCMobick Treasury Address:3FLFiH56xBaMr5n61g9zgbSfQ1T3Bg6KPx</li>
+<li>
+<p>Toke Contract Address(Arbitrum): 0xD9897a41D7B8089c3a321559Ae80a1D14Ec0f6cc</p>
+</li>
+<li>
+<p>WhitePaper: https://jackmobick.github.io/BTCMobickDAO-whitepaper/</p>
+</li>
+<li>
+<p>BTCMobick DAO Token 신청서: https://forms.gle/Y4a6VVMYWoWkduu98</p>
+</li>
+<li>
+<p>Kakao Group Chat: https://open.kakao.com/o/gL9Hyysh</p>
+</li>
+<li>
+<p>BTCMobick Treasury Address:3FLFiH56xBaMr5n61g9zgbSfQ1T3Bg6KPx</p>
+</li>
 </ul>
 
 </body>
